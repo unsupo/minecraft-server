@@ -17,10 +17,10 @@ latest () {
 [ -e paper.jar ] && echo "paper.jar already exists skipping download...." || curl https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/138/downloads/paper-1.19.2-138.jar -o paper.jar
 
 # Set the EULA to already be TRUE
-[ -e eula.txt ] && echo "eula.txt already exists skipping download..." || curl https://gist.githubusercontent.com/MilkshakesBot/cb33ff1ae3df307c8088bd243d304fc8/raw -o eula.txt
+[ -e eula.txt ] && echo "eula.txt already exists skipping download..." || curl https://raw.githubusercontent.com/unsupo/minecraft-server/main/eula.txt -o eula.txt
 
 # Set the EULA to already be TRUE
-[ -e server.properties ] && echo "server.properties already exists skipping download..." || curl https://gist.githubusercontent.com/MilkshakesBot/8914486f71998d49b19cbdbefc2a3679/raw -o server.properties
+[ -e server.properties ] && echo "server.properties already exists skipping download..." || curl https://raw.githubusercontent.com/unsupo/minecraft-server/main/server.properties -o server.properties
 
 # Edit the below values to change JVM Arguments or Allocated RAM for the server
 ALLOCATED_RAM="1G"
